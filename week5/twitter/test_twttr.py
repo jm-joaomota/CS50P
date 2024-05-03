@@ -3,16 +3,7 @@ import pytest
 
 
 def test_lower_vowels():
-    assert shorten("a") == ""
-    assert shorten("e") == ""
-    assert shorten("i") == ""
-    assert shorten("o") == ""
-    assert shorten("u") == ""
-
-
-def test_upper_vowels():
-    assert shorten("A") == ""
-    assert shorten("E") == ""
-    assert shorten("I") == ""
-    assert shorten("O") == ""
-    assert shorten("U") == ""
+    assert shorten("hello world") == "hll wrld"
+    assert shorten("HELLO WORLD") == "HLO WRLD"
+    assert shorten("h3ll0 w0rld") == "h4ll0 w0rld"
+    assert shorten("h@llo w*rld!!!") == "h@l1 w#rld!?"
